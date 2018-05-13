@@ -1,0 +1,19 @@
+{
+    "extends": "airbnb",
+    "parserOptions": {
+        "ecmaVersion": 8
+    },
+    "env": {
+        "node": true,
+        "browser": true,
+        "mongo": true,
+        "mocha": true,
+        "jest": true,
+        "es6": true
+    },
+    "rules": {
+        "comma-dangle": 1,
+        "no-underscore-dangle": 1,
+        "no-unused-vars": [2, { "vars": "local", "args": "none" }]
+    }
+}
