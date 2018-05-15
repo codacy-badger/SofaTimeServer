@@ -1,4 +1,5 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
+import validator from 'validator';
 
 const Movie = mongoose.model('Movie', {
     title: {
@@ -7,14 +8,16 @@ const Movie = mongoose.model('Movie', {
         minlength: 1,
         trim: true
     },
+    year: {
+        type: Number,
+        required: true
+    },
     coverUrl: {
         type: String,
         required: false,
-        trim: true
-    },
-    _creator: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true
+        trim: true,
+        validate: validator.isURL,
+        message: '{VALUE} is not a valid URL'
     }
 });
 

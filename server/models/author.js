@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
-const Author = new mongoose.model("Author", {
+const Author = new mongoose.model('Author', {
     firstName: {
         type: String,
         required: true,
